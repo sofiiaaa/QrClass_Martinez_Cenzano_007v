@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/restablecer-contrasena"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ingresar-nueva-contra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--FORMULARIO-->
+  <form form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <ion-list>
+      <ion-item>
+        
+        <ion-input type="password" placeholder="Nueva contraseña"
+                   name="password1" value="" [(ngModel)]= "usuario.contrasena1"
+                   required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        
+        <ion-input type="password" placeholder="Ingrese contraseña nuevamente"
+                   name="password2" value="" [(ngModel)]= "usuario.contrasena2"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      
+    
+    </ion-list>
+    <!--BOTON ENVIAR-->
+    <ion-button type="submit" [disabled] ="formulario.invalid" expand="block" routerLink="/login">
+     Cambiar clave
+    </ion-button>
+   </form>
+</ion-content>

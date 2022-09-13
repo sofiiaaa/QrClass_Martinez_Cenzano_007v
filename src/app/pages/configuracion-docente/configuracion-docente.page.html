@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="colorDuoc" >
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/menu-profesor"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Ajustes</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--OPCIONES DE COINFIGURACION-->
+  <ion-grid fixed>
+    <!--TAMAÑO LETRA-->
+    <ion-row>
+      <ion-col size="5"><div><h4>Tamaño letra</h4></div></ion-col>
+      <ion-col size="7"><ion-range>
+        <ion-icon slot="start" name="text-outline" style="font-size: 15px"></ion-icon>
+        <ion-icon slot="end" name="text-outline"></ion-icon>
+      </ion-range></ion-col>
+    </ion-row>
+    <!--VOLUMENN-->
+    <ion-row>
+      <ion-col size="5"><div><h4>Volumen</h4></div></ion-col>
+      <ion-col size="7"><ion-range>
+        <ion-icon slot="start" name="volume-low-outline"></ion-icon>
+        <ion-icon slot="end" name="volume-high-outline"></ion-icon>
+      </ion-range></ion-col>
+    </ion-row>
+     <!--MODO NEGRO-->
+    <ion-row>
+      <ion-col size="6"><div><h4>Modo nocturno</h4></div></ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-toggle slot="end" name="blackberry" color="dark" checked></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  
+  <!--CANCELAR Y GUARDAR-->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="onClick()" color="danger" routerLink="/menu-profesor">
+        Cancelar</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="onClick()"  color="primary">
+        Guardar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="colorDuoc" >
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/menu-alumno"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Mi Asistencia</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card-title slot="start">Asistencia</ion-card-title>
+  <ion-card-content>Por reglamento académico tienes que tener un 75% de asistencia
+     en cada uno de tus ramos para aprobar el curso, en esta sección podrás revisar el avance 
+     y así no repetir por no ir a clases.</ion-card-content>
+  <!--TABLA-->
+<ion-grid>
+  <ion-row>
+    <ion-col size="9">Arquitectura</ion-col>
+    <ion-col size="3">70%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">Calidad De Software</ion-col>
+    <ion-col size="3">100%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">PDA Moviles</ion-col>
+    <ion-col size="3">100%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">Ingles Intermedio</ion-col>
+    <ion-col size="3">50%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">Etica Para El Trabajo</ion-col>
+    <ion-col size="3">79%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">Proceso De Portafolio 4</ion-col>
+    <ion-col size="3">89%</ion-col>
+  </ion-row>
+
+</ion-grid>
+</ion-content>

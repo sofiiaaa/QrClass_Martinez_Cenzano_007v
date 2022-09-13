@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="colorDuoc" >
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/menu-profesor"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registro</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!--SELECCIONAR SECCION-->
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Seleccione seccion" [multiple]="false" slot="start">
+        <ion-select-option value="007V">007V</ion-select-option>
+        <ion-select-option value="008V">008V</ion-select-option>
+        <ion-select-option value="009V">009V</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <!--QR IMAGEN-->
+  <ion-card class="parrafoimg">
+    <img src="assets/qrhd.jpg" class="imagenqr">
+  </ion-card>
+</ion-content>

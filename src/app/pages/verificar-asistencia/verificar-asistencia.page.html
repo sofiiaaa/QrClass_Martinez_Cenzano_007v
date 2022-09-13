@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar color="colorDuoc" >
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/menu-profesor"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Asistencia</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--SECCION -- FECHA-->
+  <ion-grid >
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-select placeholder="Seccion" [multiple]="false" slot="start">
+            <ion-select-option value="007V">007V</ion-select-option>
+            <ion-select-option value="008V">008V</ion-select-option>
+            <ion-select-option value="009V">009V</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+    </ion-col>
+      <ion-col size="6"><div><h4>05/09/2022</h4></div></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--TABLA-->
+<ion-grid>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="9">nombre</ion-col>
+    <ion-col size="3"><ion-toggle></ion-toggle></ion-col>
+  </ion-row>
+
+</ion-grid>
+<!--PIE DE PAGINA-->
+<ion-grid>
+  <ion-row class="ion-text-center">
+    <ion-col size="2"><ion-button (click)="onClick()"  fill="clear">
+      <p><<</p>
+    </ion-button></ion-col>
+    <ion-col size="2"><ion-button (click)="onClick()"  fill="clear">
+      <p><</p>
+    </ion-button></ion-col>
+    <ion-col size="1"><ion-button (click)="onClick()"  fill="clear">
+      <p>1</p>
+    </ion-button></ion-col>
+    <ion-col size="1" ><ion-button (click)="onClick()"  fill="clear">
+      <p>2</p>
+    </ion-button></ion-col>
+    <ion-col size="2"><ion-button (click)="onClick()"  fill="clear">
+      <p>3</p>
+    </ion-button></ion-col>
+    <ion-col size="2"><ion-button (click)="onClick()"  fill="clear">
+      <p>></p>
+    </ion-button></ion-col>
+    <ion-col size="2"><ion-button (click)="onClick()"  fill="clear">
+      <p>>></p>
+    </ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+<!--CANCELAR Y GUARDAR-->
+<ion-grid>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="onClick()" color="danger" routerLink="/menu-profesor">
+      Cancelar</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="onClick()"  color="primary">
+      Guardar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+

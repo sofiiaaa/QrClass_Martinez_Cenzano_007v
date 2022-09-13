@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+   
+    <ion-title>Registrarme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+ 
+    <ion-list>
+      <ion-item>
+        <!--NOMBRE-->
+        <ion-input type="text" placeholder="Ingrese nombre" name="nombre"
+        value="" [(ngModel)]= "nuevoUsuario.nombre"
+        required></ion-input>
+      </ion-item>
+       <!--APELLIDO-->
+      <ion-item>
+        <ion-input type="text" placeholder="Ingrese apellido" name="appellido"
+        value="" [(ngModel)]= "nuevoUsuario.apellido"
+        required></ion-input>
+      </ion-item>
+       <!--CORREO-->
+      <ion-item >
+        <ion-input type="email" placeholder="Ingrese Correo"
+                   name="email" value="" [(ngModel)]= "nuevoUsuario.correo"
+                   
+                   pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                   required>
+                   <!--el "+"concatena, el $ significa elfinal del string, el @ y el . son parte del email-->
+        </ion-input>
+        </ion-item>
+         <!--PASSWORD 1-->
+        <ion-item>
+        <ion-input type="password" placeholder="Nueva contraseña"
+                     name="contrasena1" value="" [(ngModel)]= "nuevoUsuario.contrasena1"
+                     required>
+          </ion-input>
+        </ion-item>
+         <!--PASSWORD 2-->
+        <ion-item>
+          <ion-input type="password" placeholder="Vuelva a ingresar contraseña"
+                     name="contrasena2" value="" [(ngModel)]= "nuevoUsuario.contrasena2"
+                     required>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+    
+
+    
+    <!--REGISTRARSE-->
+  <div style="text-align: center;">
+   <ion-button   [disabled] ="formulario.invalid"   
+   size="medium"     type="submit" expand="block" routerLink="/login">
+     Registrarme
+   </ion-button>
+ </div>
+ <!--VOLVER-->
+ <div style="text-align: center;">
+  <ion-button routerLink="/login"  
+  size="medium" color="dark" type="submit" expand="block" >
+    Volver
+  </ion-button>
+</div>
+  </form>
+  
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="colorDuoc" >
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/menu-alumno"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registrar Asistencia</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--QR SCANNER-->
+  <ion-card class="parrafoimg">
+    <img src="assets/scan.png" class="scanner">
+  </ion-card>
+
+  
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <!--boton atras-->
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      routerLink="/restablecer-contrasena"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ingresar-clave</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--FORMULARIO-->
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <ion-list>
+      <ion-item>  
+        <ion-input type="text" placeholder="Ingrese clave secreta"
+                    name="clave" value="" [(ngModel)]= "usuario.clave"
+                    
+                    pattern="([a-zA-Z0-9])+([a-zA-Z0-9])+([a-zA-Z0-9])+([a-zA-Z0-9])+([a-zA-Z0-9])+([a-zA-Z0-9])"
+                    required>
+                    <!--el "+"concatena, el $ significa elfinal del string, el @ y el . son parte del email-->
+         </ion-input></ion-item>
+    </ion-list>
+    <!--BOTON ENVIAR-->
+    <ion-button   [disabled] ="formulario.invalid"   
+      size="medium"      color="" type="submit" expand="block" routerLink="/ingresar-nueva-contra">
+        Enviar
+      </ion-button>
+  
+   </form>
+</ion-content>
