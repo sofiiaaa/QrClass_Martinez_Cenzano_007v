@@ -58,12 +58,8 @@ export class AppComponent {
       redirecTo: '/configuracion-docente'
     },
 
-    {
-      
-      icon: 'enter-outline',
-      name: 'Cerrar sesión',
-      redirecTo: '/login'
-    },
+   
     
   ];
+  salir(){localStorage.clear()}
 }

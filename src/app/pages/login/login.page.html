@@ -1,52 +1,30 @@
-<ion-content >
-  <!--logo-->
-  
-   <img src="assets/logo_duoc.png" class="loge">
+
+
+<ion-content>
+  <ion-card>
+    
  
-   <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
-     <ion-list-header>
-       <ion-label >Iniciar sesión </ion-label>
-     </ion-list-header>
- 
-     <ion-item >
-       <ion-label position="floating">Correo electronico: </ion-label>
-       <ion-input type="email" placeholder="Ingrese Correo"
-                  name="email" value="" [(ngModel)]= "usuario.correo"
-                  
-                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-                  required>
-                  <!--el "+"concatena, el $ significa elfinal del string, el @ y el . son parte del email-->
-       </ion-input>
-     </ion-item>
- 
-     <ion-item>
-      
-       <ion-label position="floating">contrasena: </ion-label>
-       <ion-input type="password" placeholder="Ingrese Contrasena"
-                  name="password" value="" [(ngModel)]= "usuario.contrasena"
-                  required>
-       </ion-input>
-     </ion-item>
- 
-     <div style="text-align: center;">
-     <ion-button   [disabled] ="formulario.invalid"   
-     size="small"   class="colorDuoc" type="submit" expand="secondary" routerLink="/menu-alumno">
-       Ingresar como Alumno
-     </ion-button>
-   </div>
-     <div style="text-align: center;">
-     <ion-button   [disabled] ="formulario.invalid"   
-     size="small"      color="" type="submit" expand="secondary" routerLink="/menu-profesor">
-       Ingresar como Docente
-     </ion-button>
-   </div>
- 
- <!--RESTABLECER PASS-->
- <div style="text-align: center;" >
-     <button class="btnrestab"     
-         routerLink="/restablecer-contrasena">
-       Olvide mi contraseña
-     </button>
-   </div>
-   </form>
- </ion-content>
+
+    <ion-card-content>
+      <img src="assets/logo_duoc.png" class="loge">
+        <form [formGroup]="formularioLogin">
+
+          <ion-item>
+            <ion-label position="floating">Correo: </ion-label>
+            <ion-input type="email" formControlName="correo"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password: </ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </form>
+        <br>
+        <ion-button (click)="Ingresar()" expand="block" fill="outline" shape="round">
+          Ingresar
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+

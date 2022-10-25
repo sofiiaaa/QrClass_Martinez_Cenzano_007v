@@ -18,6 +18,13 @@
             {{ c.name }}
          </ion-item>
         </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-button (click)="salir()" routerLink="/inicio" expand="block" fill="clear" shape="round">
+            Cerrar Sesion
+          </ion-button>
+        </ion-menu-toggle>
+ 
      </ion-list>
     </ion-content>
     

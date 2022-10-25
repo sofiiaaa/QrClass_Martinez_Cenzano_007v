@@ -7,7 +7,7 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title class="ion-text-center">Bienvenido</ion-title>
+    <ion-title class="ion-text-center">Bienvenide</ion-title>
 
     <ion-avatar slot="start">
       <img src="assets/logo1.png"/>
@@ -15,35 +15,26 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content color="ligth">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+          *ngFor="let noticia of noticias; let i=index">
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>El mercurio</ion-card-subtitle>
-      <ion-card-title>Bombero salva gatito de incendio</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p class="parrafo">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda non quia eligendi iste magni reprehenderit repudiandae harum perferendis distinctio, a fugiat sequi, eveniet inventore itaque culpa delectus consequuntur tempore ea!
-      </p>
-      <img src="assets/duoc_quemado.jpg" class="ion-padding">
-      <p class="parrafo">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda non quia eligendi iste magni reprehenderit repudiandae harum perferendis distinctio, a fugiat sequi, eveniet inventore itaque culpa delectus consequuntur tempore ea!
-      </p>
-    </ion-card-content>
-  </ion-card>
+          <ion-card>
+            <ion-card-header>
+                <ion-card-subtitle>
+                  <span class="text-primary">{{i + 1}}. </span>
+                  <span class="noticia-source-name">{{noticia.source.name}} </span> </ion-card-subtitle>
+                <ion-card-title>{{noticia.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-img *ngIf="noticia.urlToImage"
+                      [src] ="noticia.urlToImage"></ion-img>
+            <ion-card-content>
+              <p>
+                {{noticia.descripcion}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
 
-  <ion-card>
-    
-    
-      
-      <img src="assets/uber.jpg" class="publicidad">
-    
-  </ion-card>
-
-
-  
-
-  <!--esto es un comentario-->
-  
-</ion-content>
